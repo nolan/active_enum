@@ -26,7 +26,7 @@ module ActiveEnum
       #     enumerate :to, :from, :with => Sex
       #
       def enumerate(*attributes, &block)
-        define_attribute_methods unless generated_methods?
+        define_attribute_methods unless attribute_methods_generated?
 
 				options = attributes.extract_options!
 				attributes.each do |attribute|
